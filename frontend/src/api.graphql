@@ -1,0 +1,17 @@
+query getDevices {
+    devices {
+        id
+        address
+        owner
+        zip_code
+        description
+        device_contacts{
+            address
+            bank_account
+            emailaddress
+            name
+            phone_number
+            zip_code
+        }
+    }
+}

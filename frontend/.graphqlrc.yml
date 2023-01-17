@@ -1,0 +1,17 @@
+overwrite: true
+schema:
+  - https://open-jaybird-63.hasura.app/v1/graphql:
+      headers:
+        'x-hasura-admin-secret': 'nVjm8deydbY5PRhCSSRO78U40CZ7UneJ3qpjDG45tmr9nibF5nhWOw2Vw2ON1saw'
+        # 'x-hasura-role': 'admin'
+documents: 'src/**/*.graphql'
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+      - 'typescript-document-nodes'
+  ./graphql.schema.json:
+    plugins:
+      - 'introspection'
