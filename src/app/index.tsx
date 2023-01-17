@@ -35,8 +35,10 @@ const App: FC = () => {
     };
   });
 
+  console.log(import.meta.env.VITE_API_URl);
+
   const httpLink = createHttpLink({
-    uri: 'https://open-jaybird-63.hasura.app/v1/graphql',
+    uri: import.meta.env.VITE_API_URL,
   });
 
   const client = new ApolloClient({
