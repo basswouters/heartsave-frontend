@@ -3,3 +3,9 @@ query getDevices {
     id
   }
 }
+
+mutation addLocation($data: location_insert_input = {}) {
+  insert_location_one(object: $data) {
+    id
+  }
+}
